@@ -49,6 +49,9 @@ au BufWinLeave * call clearmatches()
 
 " Remove all trailing whitespaces
 nnoremap <silent> <leader>rs :let _s=@/ <Bar> :%s/\s\+$//e <Bar> :let @/=_s <Bar> :nohl <Bar> :unlet _s <CR>
+"
+" Highlight trailing whitespaces
+:highlight ExtraWhitespace ctermbg=red guibg=red
 
 function! s:JbzCppMan()
     let old_isk = &iskeyword
